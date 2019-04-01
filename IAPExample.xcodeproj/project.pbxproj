@@ -7,17 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		644012852251192700593B7F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 644012842251192700593B7F /* StoreKit.framework */; };
+		644012872252556C00593B7F /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644012862252556C00593B7F /* Products.swift */; };
+		64401289225264BD00593B7F /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64401288225264BD00593B7F /* IAPHelper.swift */; };
+		6440128B2252733700593B7F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6440128A2252733700593B7F /* DetailViewController.swift */; };
+		6440128D22527AEA00593B7F /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6440128C22527AEA00593B7F /* ProductCell.swift */; };
 		64DF3B3722243F5F0013E633 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF3B3622243F5F0013E633 /* AppDelegate.swift */; };
-		64DF3B3922243F5F0013E633 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF3B3822243F5F0013E633 /* ViewController.swift */; };
+		64DF3B3922243F5F0013E633 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DF3B3822243F5F0013E633 /* MainViewController.swift */; };
 		64DF3B3C22243F5F0013E633 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DF3B3A22243F5F0013E633 /* Main.storyboard */; };
 		64DF3B3E22243F610013E633 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64DF3B3D22243F610013E633 /* Assets.xcassets */; };
 		64DF3B4122243F610013E633 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DF3B3F22243F610013E633 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		644012842251192700593B7F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		644012862252556C00593B7F /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		64401288225264BD00593B7F /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		6440128A2252733700593B7F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		6440128C22527AEA00593B7F /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		64DF3B3322243F5F0013E633 /* IAPExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IAPExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64DF3B3622243F5F0013E633 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		64DF3B3822243F5F0013E633 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		64DF3B3822243F5F0013E633 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		64DF3B3B22243F5F0013E633 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		64DF3B3D22243F610013E633 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64DF3B4022243F610013E633 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -29,17 +39,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				644012852251192700593B7F /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		644012832251192700593B7F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				644012842251192700593B7F /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		64DF3B2A22243F5F0013E633 = {
 			isa = PBXGroup;
 			children = (
 				64DF3B3522243F5F0013E633 /* IAPExample */,
 				64DF3B3422243F5F0013E633 /* Products */,
+				644012832251192700593B7F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +75,15 @@
 			isa = PBXGroup;
 			children = (
 				64DF3B3622243F5F0013E633 /* AppDelegate.swift */,
-				64DF3B3822243F5F0013E633 /* ViewController.swift */,
+				64DF3B3822243F5F0013E633 /* MainViewController.swift */,
+				6440128A2252733700593B7F /* DetailViewController.swift */,
+				6440128C22527AEA00593B7F /* ProductCell.swift */,
 				64DF3B3A22243F5F0013E633 /* Main.storyboard */,
 				64DF3B3D22243F610013E633 /* Assets.xcassets */,
 				64DF3B3F22243F610013E633 /* LaunchScreen.storyboard */,
 				64DF3B4222243F610013E633 /* Info.plist */,
+				644012862252556C00593B7F /* Products.swift */,
+				64401288225264BD00593B7F /* IAPHelper.swift */,
 			);
 			path = IAPExample;
 			sourceTree = "<group>";
@@ -96,6 +120,11 @@
 				TargetAttributes = {
 					64DF3B3222243F5F0013E633 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -135,7 +164,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64DF3B3922243F5F0013E633 /* ViewController.swift in Sources */,
+				64401289225264BD00593B7F /* IAPHelper.swift in Sources */,
+				644012872252556C00593B7F /* Products.swift in Sources */,
+				6440128B2252733700593B7F /* DetailViewController.swift in Sources */,
+				6440128D22527AEA00593B7F /* ProductCell.swift in Sources */,
+				64DF3B3922243F5F0013E633 /* MainViewController.swift in Sources */,
 				64DF3B3722243F5F0013E633 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
