@@ -9,10 +9,10 @@
 import Foundation
 
 public struct Products {
-    public static let Mazda6 = "mazda6"
-    public static let OneGallon = "1gallon"
+    public static let Premium = "thi.nguyen.test.certificate.premium"
+    public static let OneHundredCoins = "thi.nguyen.test.certificate.100.coins"
 
-    private static let productIdentifiers: Set<ProductIdentifier> = [Products.Mazda6, Products.OneGallon]
+    private static let productIdentifiers: Set<ProductIdentifier> = [Products.Premium, Products.OneHundredCoins]
 
     public static let store = IAPHelper(productIds: Products.productIdentifiers)
 }
