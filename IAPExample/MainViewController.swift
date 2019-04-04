@@ -81,6 +81,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func restoreTapped(_ sender: AnyObject) {
+        print("Tapped restore");
         Products.store.restorePurchases()
     }
     
