@@ -10,9 +10,9 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var imageView: UIImageView?
+    @IBOutlet weak var lbl: UILabel!
     
-    var image: UIImage? {
+    var text: String? {
         didSet {
             configureView()
         }
@@ -25,7 +25,7 @@ class DetailViewController: UIViewController {
     }
     
     func configureView() {
-        imageView?.image = image
+        lbl?.text = text
     }
 
 }

@@ -12,8 +12,9 @@ public struct Products {
     public static let Premium = "thi.nguyen.test.certificate.premium"
     public static let OneHundredCoins = "thi.nguyen.test.certificate.100.coins"
     public static let VIP3 = "thi.nguyen.test.certificate.vip3"
-
-    private static let productIdentifiers: Set<ProductIdentifier> = [Products.Premium, Products.OneHundredCoins, Products.VIP3]
+    public static let LoveWinter = "thi.nguyen.test.certificate.lovewinter"
+    
+    private static let productIdentifiers: Set<ProductIdentifier> = [Products.Premium, Products.OneHundredCoins, Products.VIP3, Products.LoveWinter]
 
     public static let store = IAPHelper(productIds: Products.productIdentifiers)
 }

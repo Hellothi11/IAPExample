@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="39R-Nh-H4M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="39R-Nh-H4M">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -87,23 +87,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PY7-0H-KTQ">
-                                <rect key="frame" x="50" y="100" width="275" height="204"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FgK-ns-yiG">
+                                <rect key="frame" x="35" y="283.5" width="305" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="204" id="xAC-HT-mWy"/>
+                                    <constraint firstAttribute="height" constant="100" id="5Q4-Kf-zvf"/>
                                 </constraints>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="PY7-0H-KTQ" firstAttribute="centerX" secondItem="A7f-TK-JAA" secondAttribute="centerX" id="1ch-dp-Ebr"/>
-                            <constraint firstItem="PY7-0H-KTQ" firstAttribute="leading" secondItem="3Vo-CM-QXC" secondAttribute="leading" constant="50" id="Enn-nh-3ub"/>
-                            <constraint firstItem="PY7-0H-KTQ" firstAttribute="top" secondItem="3Vo-CM-QXC" secondAttribute="top" constant="36" id="Umx-MU-Xgu"/>
+                            <constraint firstItem="FgK-ns-yiG" firstAttribute="centerX" secondItem="A7f-TK-JAA" secondAttribute="centerX" id="9Ki-vn-r8S"/>
+                            <constraint firstItem="FgK-ns-yiG" firstAttribute="leading" secondItem="3Vo-CM-QXC" secondAttribute="leading" constant="35" id="Gsa-ic-X6p"/>
+                            <constraint firstItem="FgK-ns-yiG" firstAttribute="centerY" secondItem="A7f-TK-JAA" secondAttribute="centerY" id="cYe-Gc-Q1M"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Vo-CM-QXC"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="PY7-0H-KTQ" id="6pF-ad-mcr"/>
+                        <outlet property="lbl" destination="FgK-ns-yiG" id="bR2-Mh-fQZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JL6-Ms-Tf2" userLabel="First Responder" sceneMemberID="firstResponder"/>

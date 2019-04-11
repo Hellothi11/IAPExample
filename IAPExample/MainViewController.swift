@@ -21,6 +21,7 @@ class MainViewController: UIViewController {
     
     let showDetailSegueIdentifier = "showDetail"
     var products: [SKProduct] = []
+    let SECRET = "36915f96204244b498fdc0e28e0f50f8"
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if identifier == showDetailSegueIdentifier {
@@ -44,8 +45,7 @@ class MainViewController: UIViewController {
             
             if let name = resourceNameForProductIdentifier(product.productIdentifier),
                 let detailViewController = segue.destination as? DetailViewController {
-                let image = UIImage(named: name)
-                detailViewController.image = image
+                detailViewController.text = name
             }
         }
     }
@@ -56,11 +56,30 @@ class MainViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.handlePurchaseNotification(_:)),
                                                name: .IAPHelperPurchaseNotification,
                                                object: nil)
+        // verifyReceipt()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        handleRefresh(nil)
+    func verifyReceipt() {
+        if let receiptURL = Bundle.main.appStoreReceiptURL,
+            let data = try? Data(contentsOf: receiptURL) {
+            print("receiptURL: \(receiptURL)")
+            let base64 = data.base64EncodedString()
+            let dictionary = ["receipt-data": base64, "password": SECRET]
+            if let requestData = try? JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted) {
+                if let requestURL = URL(string: "https://sandbox.itunes.apple.com/verifyReceipt") {
+                    var request = URLRequest(url: requestURL)
+                    request.httpMethod = "POST"
+                    let session = URLSession.shared
+                    let task = session.uploadTask(with: request, from: requestData) {
+                        data, response, error in
+                        if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                            print(" verifyReceipt response: \(dataString)")
+                        }
+                    }
+                    task.resume()
+                }
+            }
+        }
     }
 
     @objc func handleRefresh(_ sender: Any?) {
